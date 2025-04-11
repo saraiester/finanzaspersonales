@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanzas Personales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <app-header></app-header>
+    
+    <main>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="transactions">Transacciones</button>
+        <button class="tab-button" data-tab="budget">Presupuesto</button>
+        <button class="tab-button" data-tab="comparison">Comparación</button>
+      </div>
+      
+      <div id="transactions" class="tab-content active">
+        <div class="form-container">
+          <transaction-form></transaction-form>
+        </div>
+        <div class="list-container">
+          <transaction-list></transaction-list>
+        </div>
+      </div>
+      
+      <div id="budget" class="tab-content">
+        <budget-form></budget-form>
+      </div>
+      
+      <div id="comparison" class="tab-content">
+        <budget-comparison></budget-comparison>
+        <summary-charts></summary-charts>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
